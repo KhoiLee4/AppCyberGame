@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AppCyberGame.Properties {
+namespace AppCyberGameClient.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace AppCyberGame.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AppCyberGame.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AppCyberGameClient.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -66,6 +66,16 @@ namespace AppCyberGame.Properties {
         internal static System.Drawing.Bitmap Logo_1 {
             get {
                 object obj = ResourceManager.GetObject("Logo_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_2 {
+            get {
+                object obj = ResourceManager.GetObject("Logo_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

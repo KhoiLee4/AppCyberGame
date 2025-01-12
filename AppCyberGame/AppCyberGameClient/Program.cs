@@ -1,11 +1,11 @@
-﻿using AppCyberGame.View;
+﻿using AppCyberGameClient.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppCyberGame
+namespace AppCyberGameClient
 {
     internal static class Program
     {

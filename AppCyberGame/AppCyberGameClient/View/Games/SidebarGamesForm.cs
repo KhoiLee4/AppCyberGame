@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppCyberGame
+namespace AppCyberGameClient.View.Games
 {
-    public partial class Form1 : Form
+    public partial class SidebarGamesForm : Form
     {
-        public Form1()
+        public SidebarGamesForm()
         {
             InitializeComponent();
         }

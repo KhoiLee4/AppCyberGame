@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCyberGame", "AppCyberGame\AppCyberGame.csproj", "{1E031081-7CC2-4D93-B8EB-EDC7A5C0A1C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCyberGameAdmin", "AppCyberGame\AppCyberGameAdmin.csproj", "{1E031081-7CC2-4D93-B8EB-EDC7A5C0A1C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCyberGameClient", "AppCyberGameClient\AppCyberGameClient.csproj", "{82AB8404-778A-4D8A-8895-C132C9A67C9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1E031081-7CC2-4D93-B8EB-EDC7A5C0A1C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E031081-7CC2-4D93-B8EB-EDC7A5C0A1C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E031081-7CC2-4D93-B8EB-EDC7A5C0A1C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82AB8404-778A-4D8A-8895-C132C9A67C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82AB8404-778A-4D8A-8895-C132C9A67C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82AB8404-778A-4D8A-8895-C132C9A67C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82AB8404-778A-4D8A-8895-C132C9A67C9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
