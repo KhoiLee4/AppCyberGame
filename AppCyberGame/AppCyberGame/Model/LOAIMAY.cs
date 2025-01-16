@@ -21,7 +21,7 @@ namespace AppCyberGame.Model
     
         public string MaLM { get; set; }
         public string TenLM { get; set; }
-        public Nullable<int> Gia { get; set; }
+        public Nullable<double> Gia { get; set; }
         public string CauHinh { get; set; }
     
         public virtual ICollection<MAY> MAYs { get; set; }

@@ -1,11 +1,17 @@
 ﻿using AppCyberGame.View;
 using AppCyberGame.View.Admin;
 using AppCyberGame.View.Dashboard;
+using AppCyberGame.View.LoginLogout;
+using AppCyberGame.View.Orders;
+using AppCyberGame.View.Setting;
+using AppCyberGame.View.Shop;
+using AppCyberGame.View.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.HtmlControls;
 using System.Windows.Forms;
 
 namespace AppCyberGame.Service
@@ -21,6 +27,8 @@ namespace AppCyberGame.Service
         private static Control _Control2 = null;
         private static Control _Control3 = null;
         private static Control _Control4 = null;
+        //private static Control _ControlOrther = null;
+        //private static Control _ControlAccount = null;
 
         public FormAction()
         {
@@ -33,6 +41,29 @@ namespace AppCyberGame.Service
             _Control2 = control2;
             _Control3 = control3;
             _Control4 = control4;
+            //_ControlOrther = controlOrther;
+            //_ControlAccount = controlAccount;
+        }
+
+        public void LoadForm(Control ControlContent, Form FormAtion, Form FormChild)
+        {
+            if (FormAtion != null && !FormAtion.IsDisposed)
+            {
+                FormAtion.Close();
+            }
+
+            // Thiết lập form mới vào ActForm
+            FormChild.TopLevel = false;
+            FormChild.FormBorderStyle = FormBorderStyle.None;
+            //FormChild.Dock = DockStyle.Fill;
+            FormChild.AutoScaleMode = AutoScaleMode.Dpi;
+
+            // Thêm form vào Control và hiển thị
+            FormAtion = FormChild;
+            ControlContent.Controls.Add(FormAtion);
+            ControlContent.Tag = FormAtion;
+            FormAtion.Show();
+            FormAtion.BringToFront();
         }
 
         public void LoadForm1(Form FormChild)
@@ -119,18 +150,136 @@ namespace AppCyberGame.Service
             _Form4.BringToFront();
         }
 
-        public void LoadHome()
+        public void LoadLogin()
         {
-            _Control1.Visible = true;
-            _Control2.Visible = true;
+            _Control1.Visible = false;
+            _Control2.Visible = false;
+            _Control3.Visible = true;
+            _Control4.Visible = false;
+            //_ControlAccount.Visible = false;
+
+            _Control3.Dock = DockStyle.None;
+            _Control3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            _Control3.Size = new System.Drawing.Size(600, 1080);
+            _Control3.Location = new System.Drawing.Point(660, 0);
+
+            //LoadForm1(new MenuForm());
+            LoadForm3(new LoginForm());
+        }
+
+        public void LoadCreate()
+        {
+            //_Control1.Visible = true;
+            //_Control2.Visible = true;
             _Control3.Visible = true;
             //_Control4.Visible = true;
 
             _Control3.Dock = DockStyle.Fill;
 
+            //LoadForm1(new MenuForm());
+            LoadForm3(new RegisterForm());
+        }
+
+        public void LoadGG()
+        {
+            //_Control1.Visible = true;
+            //_Control2.Visible = true;
+            _Control3.Visible = true;
+            //_Control4.Visible = true;
+
+            _Control3.Dock = DockStyle.Fill;
+
+            //LoadForm1(new MenuForm());
+            //LoadForm3(new GGForm());
+        }
+
+        public void LoadDashboard()
+        {
+            _Control1.Visible = true;
+            _Control2.Visible = true;
+            _Control3.Visible = true;
+            _Control4.Visible = false;
+
+            _Control3.Dock = DockStyle.Fill;
+            
             LoadForm1(new MenuForm());
             LoadForm2(new SidebarAdminForm());
             LoadForm3(new DashboardForm());
         }
+
+        public void LoadShop()
+        {
+            _Control1.Visible = true;
+            _Control2.Visible = true;
+            _Control3.Visible = true;
+            _Control4.Visible = false;
+
+            _Control3.Dock = DockStyle.Fill;
+
+            //LoadForm1(new MenuForm());
+            //LoadForm2(new SidebarAdminForm());
+            LoadForm3(new ShopForm());
+        }
+
+        public void LoadOrders()
+        {
+            _Control1.Visible = true;
+            _Control2.Visible = true;
+            _Control3.Visible = true;
+            _Control4.Visible = false;
+
+            _Control3.Dock = DockStyle.Fill;
+
+            //LoadForm1(new MenuForm());
+            //LoadForm2(new SidebarAdminForm());
+            LoadForm3(new OrdersForm());
+        }
+        public void LoadDetailOrders(string id)
+        {
+            _Control1.Visible = true;
+            _Control2.Visible = true;
+            _Control3.Visible = true;
+            _Control4.Visible = false;
+
+            _Control3.Dock = DockStyle.Fill;
+
+            //LoadForm1(new MenuForm());
+            //LoadForm2(new SidebarAdminForm());
+            LoadForm3(new DetailOrdersForm(id));
+        }
+
+        public void LoadUsers()
+        {
+            _Control1.Visible = true;
+            _Control2.Visible = true;
+            _Control3.Visible = true;
+            _Control4.Visible = false;
+
+            _Control3.Dock = DockStyle.Fill;
+
+            //LoadForm1(new MenuForm());
+            //LoadForm2(new SidebarAdminForm());
+            LoadForm3(new UsersForm());
+        }
+
+        public void LoadSetting()
+        {
+            _Control1.Visible = true;
+            _Control2.Visible = true;
+            _Control3.Visible = true;
+            _Control4.Visible = false;
+
+            _Control3.Dock = DockStyle.Fill;
+
+            //LoadForm1(new MenuForm());
+            //LoadForm2(new SidebarAdminForm());
+            LoadForm3(new SettingForm());
+        }
+
+        //public void LoadAccount()
+        //{
+        //    _ControlAccount.Visible = !_ControlAccount.Visible;
+        //    _ControlAccount.BringToFront();
+        //}
     }
 }

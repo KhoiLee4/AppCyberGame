@@ -59,53 +59,77 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\APP.cs">
+      <DependentUpon>CyberGame.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\CHITIETHOADON.cs">
-      <DependentUpon>ModelCyberGame.tt</DependentUpon>
+      <DependentUpon>CyberGame.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CyberGame.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CyberGame.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CyberGame.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CyberGame.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CyberGame.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CyberGame.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\DICHVU.cs">
-      <DependentUpon>ModelCyberGame.tt</DependentUpon>
+      <DependentUpon>CyberGame.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GAME.cs">
+      <DependentUpon>CyberGame.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\HOADON.cs">
-      <DependentUpon>ModelCyberGame.tt</DependentUpon>
+      <DependentUpon>CyberGame.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\KHACH.cs">
-      <DependentUpon>ModelCyberGame.tt</DependentUpon>
+      <DependentUpon>CyberGame.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\LOAIMAY.cs">
-      <DependentUpon>ModelCyberGame.tt</DependentUpon>
+      <DependentUpon>CyberGame.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\MAY.cs">
-      <DependentUpon>ModelCyberGame.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ModelCyberGame.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelCyberGame.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ModelCyberGame.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelCyberGame.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ModelCyberGame.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelCyberGame.edmx</DependentUpon>
+      <DependentUpon>CyberGame.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\QUANTRI.cs">
-      <DependentUpon>ModelCyberGame.tt</DependentUpon>
+      <DependentUpon>CyberGame.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TAIKHOAN.cs">
-      <DependentUpon>ModelCyberGame.tt</DependentUpon>
+      <DependentUpon>CyberGame.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Service\FormAction.cs" />
+    <Compile Include="Service\Session.cs" />
     <Compile Include="View\Apps\AppsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Apps\AppsForm.Designer.cs">
       <DependentUpon>AppsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Apps\CartAppsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Apps\CartAppsForm.Designer.cs">
+      <DependentUpon>CartAppsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Apps\ListAppsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Apps\ListAppsForm.Designer.cs">
+      <DependentUpon>ListAppsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Apps\SidebarAppsForm.cs">
       <SubType>Form</SubType>
@@ -113,17 +137,41 @@
     <Compile Include="View\Apps\SidebarAppsForm.Designer.cs">
       <DependentUpon>SidebarAppsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Games\AppsGameSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Games\AppsGameSForm.Designer.cs">
+      <DependentUpon>AppsGameSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Games\CartGamesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Games\CartGamesForm.Designer.cs">
+      <DependentUpon>CartGamesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Games\GamesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Games\GamesForm.Designer.cs">
       <DependentUpon>GamesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Games\ListGamesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Games\ListGamesForm.Designer.cs">
+      <DependentUpon>ListGamesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Games\SidebarGamesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Games\SidebarGamesForm.Designer.cs">
       <DependentUpon>SidebarGamesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Home\DetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Home\DetailForm.Designer.cs">
+      <DependentUpon>DetailForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Home\HomeForm.cs">
       <SubType>Form</SubType>
@@ -167,6 +215,18 @@
     <Compile Include="View\Shop\CartForm.Designer.cs">
       <DependentUpon>CartForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Shop\GamePassesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Shop\GamePassesForm.Designer.cs">
+      <DependentUpon>GamePassesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Shop\ListShopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Shop\ListShopForm.Designer.cs">
+      <DependentUpon>ListShopForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Shop\ShopForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,25 +241,38 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="View\Apps\AppsForm.resx">
       <DependentUpon>AppsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Apps\CartAppsForm.resx">
+      <DependentUpon>CartAppsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Apps\ListAppsForm.resx">
+      <DependentUpon>ListAppsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Apps\SidebarAppsForm.resx">
       <DependentUpon>SidebarAppsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Games\AppsGameSForm.resx">
+      <DependentUpon>AppsGameSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Games\CartGamesForm.resx">
+      <DependentUpon>CartGamesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Games\GamesForm.resx">
       <DependentUpon>GamesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Games\ListGamesForm.resx">
+      <DependentUpon>ListGamesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Games\SidebarGamesForm.resx">
       <DependentUpon>SidebarGamesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Home\DetailForm.resx">
+      <DependentUpon>DetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Home\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
@@ -222,18 +295,24 @@
     <EmbeddedResource Include="View\Shop\CartForm.resx">
       <DependentUpon>CartForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Shop\GamePassesForm.resx">
+      <DependentUpon>GamePassesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Shop\ListShopForm.resx">
+      <DependentUpon>ListShopForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Shop\ShopForm.resx">
       <DependentUpon>ShopForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Shop\SidebarShopForm.resx">
       <DependentUpon>SidebarShopForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\ModelCyberGame.edmx">
+    <EntityDeploy Include="Model\CyberGame.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelCyberGame.Designer.cs</LastGenOutput>
+      <LastGenOutput>CyberGame.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\ModelCyberGame.edmx.diagram">
-      <DependentUpon>ModelCyberGame.edmx</DependentUpon>
+    <None Include="Model\CyberGame.edmx.diagram">
+      <DependentUpon>CyberGame.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -260,16 +339,40 @@
     <Folder Include="View\PrizeVault\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\ModelCyberGame.Context.tt">
+    <Content Include="Images\AppImg\chrome.png" />
+    <Content Include="Images\AppImg\discord.png" />
+    <Content Include="Images\AppImg\origin.png" />
+    <Content Include="Images\AppImg\steam.png" />
+    <Content Include="Images\AppImg\xbox.png" />
+    <Content Include="Images\GameImg\amongus.png" />
+    <Content Include="Images\GameImg\apex.png" />
+    <Content Include="Images\GameImg\eldenring.png" />
+    <Content Include="Images\GameImg\fallguys.png" />
+    <Content Include="Images\GameImg\fortnite.png" />
+    <Content Include="Images\GameImg\lol.png" />
+    <Content Include="Images\GameImg\overwatch.png" />
+    <Content Include="Images\GameImg\rocketleague.png" />
+    <Content Include="Images\GameImg\valorant.png" />
+    <Content Include="Images\GameImg\warzone.png" />
+    <Content Include="Images\ShopImg\100K.png" />
+    <Content Include="Images\ShopImg\200K.png" />
+    <Content Include="Images\ShopImg\500K.png" />
+    <Content Include="Images\ShopImg\50K.png" />
+    <Content Include="Images\ShopImg\Com.png" />
+    <Content Include="Images\ShopImg\Nuoc.png" />
+    <Content Include="Model\CyberGame.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelCyberGame.Context.cs</LastGenOutput>
-      <DependentUpon>ModelCyberGame.edmx</DependentUpon>
+      <DependentUpon>CyberGame.edmx</DependentUpon>
+      <LastGenOutput>CyberGame.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\ModelCyberGame.tt">
+    <Content Include="Model\CyberGame.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelCyberGame.edmx</DependentUpon>
-      <LastGenOutput>ModelCyberGame.cs</LastGenOutput>
+      <DependentUpon>CyberGame.edmx</DependentUpon>
+      <LastGenOutput>CyberGame.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Logo_1_1.png" />
+    <None Include="Resources\Logo_2_1.png" />
+    <None Include="Resources\Background.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

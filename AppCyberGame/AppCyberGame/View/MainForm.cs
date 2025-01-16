@@ -21,5 +21,10 @@ namespace AppCyberGame.View
             _action = new FormAction(pnContent1,pnContent2,pnContent3, pnContent4);
             _action.LoadForm3(new LoginForm());
         }
+
+        private void CheckProject_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

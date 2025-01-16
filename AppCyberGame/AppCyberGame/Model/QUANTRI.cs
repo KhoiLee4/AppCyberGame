@@ -23,8 +23,10 @@ namespace AppCyberGame.Model
         public string TenQTV { get; set; }
         public string TaiKhoanQT { get; set; }
         public string MatKhauQT { get; set; }
+        public string Email { get; set; }
         public string SDT { get; set; }
         public Nullable<System.DateTime> NgaySinh { get; set; }
+        public Nullable<bool> IsAdmin { get; set; }
     
         public virtual ICollection<HOADON> HOADONs { get; set; }
     }

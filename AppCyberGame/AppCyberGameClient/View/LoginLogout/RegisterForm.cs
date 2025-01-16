@@ -18,16 +18,23 @@ namespace AppCyberGameClient.View.LoginLogout
         {
             InitializeComponent();
             _action = new FormAction();
+            this.Dock = DockStyle.Fill;
         }
 
         private void lblCreateAccount_Click(object sender, EventArgs e)
         {
-            _action.LoadForm3(new LoginForm());
+            //_action.LoadForm3(new LoginForm());
+            _action.LoadLogin();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             _action.LoadForm3(new RegisterManuallyForm());
+        }
+
+        private void lblLogin_MouseHover(object sender, EventArgs e)
+        {
+            lblLogin.Cursor = Cursors.Hand;
         }
     }
 }

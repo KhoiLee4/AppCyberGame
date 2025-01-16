@@ -16,7 +16,6 @@ namespace AppCyberGame.Model
     {
         public KHACH()
         {
-            this.HOADONs = new HashSet<HOADON>();
             this.TAIKHOANs = new HashSet<TAIKHOAN>();
         }
     
@@ -25,7 +24,6 @@ namespace AppCyberGame.Model
         public string SDT { get; set; }
         public string DiaChi { get; set; }
     
-        public virtual ICollection<HOADON> HOADONs { get; set; }
         public virtual ICollection<TAIKHOAN> TAIKHOANs { get; set; }
     }
 }

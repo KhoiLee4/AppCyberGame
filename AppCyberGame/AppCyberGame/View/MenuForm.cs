@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppCyberGame.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace AppCyberGame.View
         public MenuForm()
         {
             InitializeComponent();
+            lblUsername.Text = Session.CurentUser.TenQTV.ToString();
         }
     }
 }

@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnContent3 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnContent1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnContent2 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnContent4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.CheckProject = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // pnContent3
@@ -73,6 +75,11 @@
             this.pnContent4.TabIndex = 4;
             this.pnContent4.Visible = false;
             // 
+            // CheckProject
+            // 
+            this.CheckProject.Interval = 500;
+            this.CheckProject.Tick += new System.EventHandler(this.CheckProject_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -99,5 +106,6 @@
         private Guna.UI2.WinForms.Guna2Panel pnContent1;
         private Guna.UI2.WinForms.Guna2Panel pnContent2;
         private Guna.UI2.WinForms.Guna2Panel pnContent4;
+        private System.Windows.Forms.Timer CheckProject;
     }
 }

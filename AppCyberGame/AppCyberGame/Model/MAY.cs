@@ -17,7 +17,7 @@ namespace AppCyberGame.Model
         public string MaM { get; set; }
         public int SoMay { get; set; }
         public int TinhTrang { get; set; }
-        public Nullable<int> ThoiGianSD { get; set; }
+        public Nullable<double> ThoiGianSD { get; set; }
         public string MaTK { get; set; }
         public string MaLM { get; set; }
     

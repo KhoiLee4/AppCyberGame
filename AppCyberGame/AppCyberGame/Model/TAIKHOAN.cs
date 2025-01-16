@@ -16,15 +16,18 @@ namespace AppCyberGame.Model
     {
         public TAIKHOAN()
         {
+            this.HOADONs = new HashSet<HOADON>();
             this.MAYs = new HashSet<MAY>();
         }
     
         public string MaTK { get; set; }
         public string TaiKhoan1 { get; set; }
         public string MatKhau { get; set; }
-        public string GioChoi { get; set; }
+        public Nullable<double> GioChoi { get; set; }
+        public string Email { get; set; }
         public string MaKH { get; set; }
     
+        public virtual ICollection<HOADON> HOADONs { get; set; }
         public virtual KHACH KHACH { get; set; }
         public virtual ICollection<MAY> MAYs { get; set; }
     }

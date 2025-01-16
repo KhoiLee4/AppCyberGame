@@ -1,4 +1,6 @@
-﻿using AppCyberGameClient.Service;
+﻿using AppCyberGame.Service;
+using AppCyberGameClient.Model;
+using AppCyberGameClient.Service;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -16,11 +18,20 @@ namespace AppCyberGameClient.View
     {
         private FormAction _action;
         private Guna2Button _curentButton;
+        private CyberGameEntities _entities;
         public MenuForm()
         {
             InitializeComponent();
             _action = new FormAction();
+            _entities = new CyberGameEntities();
             _curentButton = btnHome;
+            var user = _entities.KHACHes.Where(n => n.MaKH == Session.CurentUser.MaKH).FirstOrDefault();
+            if (user != null)
+            {
+                lblUserName.Text = user.TenKH;
+                lblTimePlay.Text = Session.CurentUser.GioChoi.ToString();
+            }
+            CheckCart.Start();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -65,6 +76,25 @@ namespace AppCyberGameClient.View
                 _curentButton = btnShop;
                 _action.LoadShop();
             }
+        }
+
+        private void btnShowPnAccount_Click(object sender, EventArgs e)
+        {
+            _action.LoadAccount();
+        }
+
+        private void CheckCart_Tick(object sender, EventArgs e)
+        {
+            var wait = _entities.HOADONs.Where(n=>n.IsCheck == false).FirstOrDefault(n => n.MaTK == Session.CurentUser.MaTK);
+            if (wait != null)
+            {
+                btnCheck.Visible = true;
+            }
+            else
+            {
+                btnCheck.Visible = false;
+            }
+            lblTimePlay.Text = Session.CurentUser.GioChoi.ToString();
         }
     }
 }

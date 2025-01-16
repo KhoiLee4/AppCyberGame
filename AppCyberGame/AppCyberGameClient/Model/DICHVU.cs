@@ -21,11 +21,11 @@ namespace AppCyberGameClient.Model
     
         public string MaDV { get; set; }
         public string TenDV { get; set; }
-        public Nullable<int> GiaDV { get; set; }
+        public double GiaDV { get; set; }
         public string LoaiDV { get; set; }
         public string MoTaDV { get; set; }
         public string HinhAnh { get; set; }
-        public string SoTonKho { get; set; }
+        public int SoTonKho { get; set; }
     
         public virtual ICollection<CHITIETHOADON> CHITIETHOADONs { get; set; }
     }

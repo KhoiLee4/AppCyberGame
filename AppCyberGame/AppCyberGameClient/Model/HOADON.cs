@@ -22,12 +22,13 @@ namespace AppCyberGameClient.Model
         public string MaHD { get; set; }
         public System.DateTime NgayGD { get; set; }
         public string PhuongThucGD { get; set; }
-        public int TongTien { get; set; }
-        public string MaKH { get; set; }
+        public double TongTien { get; set; }
+        public bool IsCheck { get; set; }
+        public string MaTK { get; set; }
         public string MaQTV { get; set; }
     
         public virtual ICollection<CHITIETHOADON> CHITIETHOADONs { get; set; }
-        public virtual KHACH KHACH { get; set; }
         public virtual QUANTRI QUANTRI { get; set; }
+        public virtual TAIKHOAN TAIKHOAN { get; set; }
     }
 }

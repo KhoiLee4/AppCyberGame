@@ -2,6 +2,7 @@
 using AppCyberGameClient.View.Apps;
 using AppCyberGameClient.View.Games;
 using AppCyberGameClient.View.Home;
+using AppCyberGameClient.View.LoginLogout;
 using AppCyberGameClient.View.Shop;
 using System;
 using System.Collections.Generic;
@@ -23,18 +24,22 @@ namespace AppCyberGameClient.Service
         private static Control _Control2 = null;
         private static Control _Control3 = null;
         private static Control _Control4 = null;
+        private static Control _ControlOrther = null;
+        private static Control _ControlAccount = null;
 
         public FormAction()
         {
 
         }
 
-        public FormAction(Control control1, Control control2, Control control3, Control control4)
+        public FormAction(Control control1, Control control2, Control control3, Control control4, Control controlOrther, Control controlAccount)
         {
             _Control1 = control1;
             _Control2 = control2;
             _Control3 = control3;
             _Control4 = control4;
+            _ControlOrther = controlOrther;
+            _ControlAccount = controlAccount;
         }
 
         public void LoadForm(Control ControlContent, Form FormAtion, Form FormChild)
@@ -142,12 +147,45 @@ namespace AppCyberGameClient.Service
             _Form4.BringToFront();
         }
 
-        public void LoadHome()
+        public void LoadLogin()
         {
-            _Control1.Visible = true;
+            _Control1.Visible = false;
+            _Control2.Visible = false;
+            _Control3.Visible = true;
+            _Control4.Visible = false;
+            _ControlAccount.Visible = false;
+
+            _Control3.Dock = DockStyle.None;
+            _Control3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            _Control3.Size = new System.Drawing.Size(600, 1080);
+            _Control3.Location = new System.Drawing.Point(660, 0);
+
+            MainForm.IsLogin = false;
+
+            //LoadForm1(new MenuForm());
+            LoadForm3(new LoginForm());
+
+        }
+
+        public void LoadCreate()
+        {
+            //_Control1.Visible = true;
             //_Control2.Visible = true;
             _Control3.Visible = true;
             //_Control4.Visible = true;
+
+            _Control3.Dock = DockStyle.Fill;
+
+            //LoadForm1(new MenuForm());
+            LoadForm3(new RegisterForm());
+        }
+
+        public void LoadHome()
+        {
+            _Control1.Visible = true;
+            _Control2.Visible = false;
+            _Control3.Visible = true;
+            _Control4.Visible = false;
 
             _Control3.Dock = DockStyle.Fill;
 
@@ -167,6 +205,7 @@ namespace AppCyberGameClient.Service
             //LoadForm1(new MenuForm());
             LoadForm2(new SidebarGamesForm());
             LoadForm3(new GamesForm());
+            LoadForm4(new CartGamesForm());
         }
 
         public void LoadApps()
@@ -181,6 +220,7 @@ namespace AppCyberGameClient.Service
             //LoadForm1(new MenuForm());
             LoadForm2(new SidebarAppsForm());
             LoadForm3(new AppsForm());
+            LoadForm4(new CartAppsForm());
         }
 
         public void LoadShop()
@@ -195,6 +235,26 @@ namespace AppCyberGameClient.Service
             LoadForm2(new SidebarShopForm());
             LoadForm3(new ShopForm());
             LoadForm4(new CartForm());
+        }
+
+        public void LoadDetail(string gamename)
+        {
+            _Control1.Visible = false;
+            _Control2.Visible = false;
+            _Control3.Visible = true;
+            _Control4.Visible = false;
+
+            _Control3.Dock = DockStyle.Fill;
+
+            //LoadForm2(new SidebarShopForm());
+            LoadForm3(new DetailForm(gamename));
+            //LoadForm4(new CartForm());
+        }
+
+        public void LoadAccount()
+        {
+            _ControlAccount.Visible = !_ControlAccount.Visible;
+            _ControlAccount.BringToFront();
         }
     }
 }
